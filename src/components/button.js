@@ -20,7 +20,7 @@ Button.contextType = languageContext
         {(color) => (
           <button className={`ui button ${color}`}>
             <languageContext.Consumer>
-              {(value) => (value === "english" ? "Submit" : "Gönder")}
+              {({ language }) => (language === "english" ? "Submit" : "Gönder")}
             </languageContext.Consumer>
           </button>
         )}
